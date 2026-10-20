@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing estimate | Triad Accounting Services</title>
+<meta name="description" content="Estimate your fixed monthly fee for outsourced accounting, payroll and reporting from Triad Accounting Services.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 5 L27 25 L5 25 Z' fill='none' stroke='%2323463D' stroke-width='2.5' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='5' r='3.5' fill='%2323463D'/%3E%3Ccircle cx='27' cy='25' r='3.5' fill='%2323463D'/%3E%3Ccircle cx='5' cy='25' r='3.5' fill='%2323463D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Triad Accounting Services home">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5 L27 25 L5 25 Z" fill="none" stroke="#23463D" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="5" r="3.2" fill="#23463D"/><circle cx="27" cy="25" r="3.2" fill="#23463D"/><circle cx="5" cy="25" r="3.2" fill="#B8862B"/></svg>
+      <span class="brand-name">Triad Accounting Services<small>Your outsourced accounting department</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn-primary" href="pricing.html">Estimate my fee</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section id="pricing" class="pricing-page">
+  <div class="wrap">
+    <div class="calc-head">
+      <div>
+        <h1 class="page-title">Estimate your monthly fee</h1>
+        <p class="lede" style="margin-top:16px">Answer a few questions and see the price up front. The estimate uses the same pricing we use for every client; your final quote is confirmed after a short call and a look at your books.</p>
+      </div>
+    </div>
+
+    <form class="calc" id="calc" onsubmit="return false" aria-describedby="calc-note">
+      <div>
+        <fieldset>
+          <legend>Your books</legend>
+          <div class="field">
+            <span class="label" id="tx-label">Bank and credit card transactions per month<span class="hint">Add up activity across all your accounts. A rough guess is fine.</span></span>
+            <div class="seg" role="radiogroup" aria-labelledby="tx-label" data-name="tx"></div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="accounts">Bank and credit card accounts<span class="hint">Three included</span></label>
+              <div class="stepper"><button type="button" data-step="-1" data-for="accounts" aria-label="Fewer accounts">−</button><input id="accounts" type="number" min="1" max="40" value="3" inputmode="numeric"><button type="button" data-step="1" data-for="accounts" aria-label="More accounts">+</button></div>
+            </div>
+            <div class="field">
+              <label for="entities">Companies (legal entities)<span class="hint">Each extra entity includes consolidated reporting</span></label>
+              <div class="stepper"><button type="button" data-step="-1" data-for="entities" aria-label="Fewer entities">−</button><input id="entities" type="number" min="1" max="25" value="1" inputmode="numeric"><button type="button" data-step="1" data-for="entities" aria-label="More entities">+</button></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payroll</legend>
+          <div class="row2">
+            <div class="field">
+              <label for="employees">Employees on payroll<span class="hint">Enter 0 if you don't need payroll</span></label>
+              <div class="stepper"><button type="button" data-step="-1" data-for="employees" aria-label="Fewer employees">−</button><input id="employees" type="number" min="0" max="200" value="0" inputmode="numeric"><button type="button" data-step="1" data-for="employees" aria-label="More employees">+</button></div>
+            </div>
+            <div class="field">
+              <span class="label" id="freq-label">How often you run payroll</span>
+              <div class="seg" role="radiogroup" aria-labelledby="freq-label" data-name="freq"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Bills and invoices</legend>
+          <div class="field">
+            <span class="label" id="ap-label">Vendor bills paid per month</span>
+            <div class="seg" role="radiogroup" aria-labelledby="ap-label" data-name="ap"></div>
+          </div>
+          <div class="field">
+            <span class="label" id="ar-label">Customer invoices sent per month</span>
+            <div class="seg" role="radiogroup" aria-labelledby="ar-label" data-name="ar"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reporting</legend>
+          <div class="field">
+            <div class="seg" role="radiogroup" aria-label="Reporting level" data-name="report"></div>
+            <span class="hint" id="report-hint" style="margin-top:10px;display:block"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anything else</legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" id="special-inventory"><span>Inventory tracking<small>Product counts, cost of goods sold, purchase orders</small></span></label>
+            <label class="check"><input type="checkbox" id="special-jobs"><span>Job or project costing<small>Construction, contracts, or profit by job</small></span></label>
+            <label class="check"><input type="checkbox" id="special-grants"><span>Grant or fund accounting<small>Restricted funds and funder reporting</small></span></label>
+            <label class="check"><input type="checkbox" id="special-property"><span>Property-level real estate reporting<small>Results by property, loans, and investor splits</small></span></label>
+          </div>
+          <div class="row2" style="margin-top:22px">
+            <div class="field">
+              <label for="salestax">Sales tax filings per month<span class="hint">Number of states or jurisdictions</span></label>
+              <div class="stepper"><button type="button" data-step="-1" data-for="salestax" aria-label="Fewer filings">−</button><input id="salestax" type="number" min="0" max="20" value="0" inputmode="numeric"><button type="button" data-step="1" data-for="salestax" aria-label="More filings">+</button></div>
+            </div>
+            <div class="field">
+              <label for="behind">Months your books are behind<span class="hint">Catch-up is a one-time fee</span></label>
+              <div class="stepper"><button type="button" data-step="-1" data-for="behind" aria-label="Fewer months">−</button><input id="behind" type="number" min="0" max="36" value="0" inputmode="numeric"><button type="button" data-step="1" data-for="behind" aria-label="More months">+</button></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="forms1099">1099s you send each January<span class="hint">Billed once a year</span></label>
+            <div class="stepper"><button type="button" data-step="-1" data-for="forms1099" aria-label="Fewer 1099s">−</button><input id="forms1099" type="number" min="0" max="200" value="0" inputmode="numeric"><button type="button" data-step="1" data-for="forms1099" aria-label="More 1099s">+</button></div>
+          </div>
+        </fieldset>
+      </div>
+
+      <aside class="statement" aria-live="polite">
+        <h3>Your estimate</h3>
+        <p class="for">Monthly service, billed at the start of each month</p>
+        <ul class="lines" id="lines"></ul>
+        <div class="total"><span>Estimated monthly fee</span><span><output id="total">$0</output> <small>/mo</small></span></div>
+        <div class="extra" id="extra"></div>
+        <div class="custom-note" id="custom-note">Your volume is above what this calculator prices. Let's set up a quick call and we'll put together a custom quote.</div>
+        <p class="fine" id="calc-note">An estimate, not a final quote. Pricing is confirmed after a 30-minute call and a look at your books.</p>
+        <a class="btn btn-primary" id="send-estimate" href="#contact">Email me this estimate</a>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-box">
+      <div>
+        <h2>Questions about your estimate?</h2>
+        <p class="lede" style="margin-top:16px">Send your estimate or a quick note. We'll reply within one business day and set up a 30-minute intro call.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:hello@triadaccountingservices.com">hello@triadaccountingservices.com<span>Email</span></a>
+        <a href="tel:+13096788238">(309) 678-8238<span>Call or text</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Triad Accounting Services · North Carolina</span>
+    <span>Monthly accounting, payroll and reporting for growing businesses</span>
+  </div>
+</footer>
+
+<script>
+/* ===== PRICING: edit these numbers to change the calculator ===== */
+const PRICING = {
+  base: 950,                 // monthly close, financials, up to 3 accounts, 1 entity
+  includedAccounts: 3,
+  perExtraAccount: 40,
+  perExtraEntity: 450,
+  tx:   [ {label:"Up to 100", add:0}, {label:"101–250", add:350}, {label:"251–500", add:750}, {label:"501–1,000", add:1400}, {label:"More than 1,000", add:null} ],
+  payrollBase: 150, payrollPerEmployee: 12,
+  freq: [ {label:"Monthly", add:0}, {label:"Twice a month", add:0}, {label:"Every two weeks", add:0}, {label:"Weekly", add:100} ],
+  ap:   [ {label:"None", add:0}, {label:"Up to 25", add:250}, {label:"26–75", add:500}, {label:"76–150", add:900}, {label:"More than 150", add:null} ],
+  ar:   [ {label:"None", add:0}, {label:"Up to 25", add:200}, {label:"26–75", add:400}, {label:"More than 75", add:700} ],
+  report: [
+    {label:"Standard", add:0,   hint:"P&L, balance sheet and cash flow every month, plus a short written summary."},
+    {label:"Management", add:350, hint:"Standard, plus budget-to-actual, a KPI dashboard and a monthly review meeting."},
+    {label:"Investor or lender", add:650, hint:"Management, plus board, investor or lender packages, covenant tracking and a rolling forecast."}
+  ],
+  special: { inventory:250, jobs:250, grants:300, property:250 },
+  perSalesTaxFiling: 60,
+  annual1099Base: 250, per1099: 12,
+  catchUpPerMonth: 275,
+  maxEmployees: 75           // above this, show "let's talk"
+};
+/* ================================================================= */
+
+const $ = id => document.getElementById(id);
+const money = n => "$" + Math.round(n).toLocaleString("en-US");
+const defaults = {tx:0, freq:2, ap:0, ar:0, report:0};
+
+document.querySelectorAll(".seg[data-name]").forEach(seg=>{
+  const name = seg.dataset.name;
+  PRICING[name].forEach((opt,i)=>{
+    const id = name+"-"+i;
+    seg.insertAdjacentHTML("beforeend",
+      `<input type="radio" name="${name}" id="${id}" value="${i}" ${i===defaults[name]?"checked":""}><label for="${id}">${opt.label}</label>`);
+  });
+});
+
+document.querySelectorAll(".stepper button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const inp = $(b.dataset.for);
+    const v = clamp(inp, (parseInt(inp.value,10)||0) + parseInt(b.dataset.step,10));
+    inp.value = v; calc();
+  });
+});
+function clamp(inp,v){ return Math.max(+inp.min, Math.min(+inp.max, v)); }
+const sel = name => +document.querySelector(`input[name="${name}"]:checked`).value;
+const num = id => { const el=$(id); const v=clamp(el, parseInt(el.value,10)||0); return v; };
+
+function calc(){
+  const P = PRICING, lines = [];
+  let total = P.base, custom = false;
+  lines.push(["Monthly close and financial statements", P.base]);
+
+  const tx = P.tx[sel("tx")];
+  if (tx.add === null) custom = true; else if (tx.add) { lines.push([`Transaction volume (${tx.label})`, tx.add]); total += tx.add; }
+
+  const accts = num("accounts"), extraA = Math.max(0, accts - P.includedAccounts);
+  if (extraA) { const c = extraA*P.perExtraAccount; lines.push([`${extraA} additional account${extraA>1?"s":""}`, c]); total += c; }
+
+  const ents = num("entities"), extraE = Math.max(0, ents-1);
+  if (extraE) { const c = extraE*P.perExtraEntity; lines.push([`${extraE} additional entit${extraE>1?"ies":"y"} and consolidation`, c]); total += c; }
+
+  const emp = num("employees");
+  document.querySelector('.seg[data-name="freq"]').style.opacity = emp ? 1 : .45;
+  if (emp) {
+    if (emp > P.maxEmployees) custom = true;
+    const f = P.freq[sel("freq")];
+    const c = P.payrollBase + emp*P.payrollPerEmployee + f.add;
+    lines.push([`Payroll, ${emp} employee${emp>1?"s":""} (${f.label.toLowerCase()})`, c]); total += c;
+  }
+
+  const ap = P.ap[sel("ap")];
+  if (ap.add === null) custom = true; else if (ap.add) { lines.push([`Bill pay (${ap.label.toLowerCase()} bills)`, ap.add]); total += ap.add; }
+  const ar = P.ar[sel("ar")];
+  if (ar.add) { lines.push([`Invoicing and collections (${ar.label.toLowerCase()})`, ar.add]); total += ar.add; }
+
+  const rp = P.report[sel("report")];
+  $("report-hint").textContent = rp.hint;
+  if (rp.add) { lines.push([`${rp.label} reporting`, rp.add]); total += rp.add; }
+
+  const specials = {inventory:"Inventory tracking", jobs:"Job costing", grants:"Grant or fund accounting", property:"Property-level reporting"};
+  for (const k in specials) if ($("special-"+k).checked) { lines.push([specials[k], P.special[k]]); total += P.special[k]; }
+
+  const st = num("salestax");
+  if (st) { const c = st*P.perSalesTaxFiling; lines.push([`Sales tax filings (${st})`, c]); total += c; }
+
+  $("lines").innerHTML = lines.map((l,i)=>`<li${i===0?' class="first"':''}><span>${l[0]}</span><span>${money(l[1])}</span></li>`).join("");
+  $("total").textContent = custom ? "Custom" : money(total);
+  $("custom-note").classList.toggle("show", custom);
+
+  const extras = [];
+  const n1099 = num("forms1099");
+  if (n1099) extras.push(["1099 preparation (once a year)", money(P.annual1099Base + n1099*P.per1099)]);
+  const behind = num("behind");
+  if (behind) extras.push([`Catch-up, ${behind} month${behind>1?"s":""} (one time)`, money(behind*P.catchUpPerMonth)]);
+  $("extra").innerHTML = extras.map(e=>`<div><span>${e[0]}</span><span>${e[1]}</span></div>`).join("");
+  $("extra").style.display = extras.length ? "block" : "none";
+
+  const body = ["Hi Jeff,", "", "I used the calculator on your site. Here's my estimate:", "",
+    ...lines.map(l=>`- ${l[0]}: ${money(l[1])}`),
+    `Estimated monthly fee: ${custom ? "custom quote needed" : money(total)}`,
+    ...extras.map(e=>`- ${e[0]}: ${e[1]}`), "",
+    "My business:", "Best way to reach me:", ""].join("\n");
+  $("send-estimate").href = "mailto:hello@triadaccountingservices.com?subject=" +
+    encodeURIComponent("Estimate from your website") + "&body=" + encodeURIComponent(body);
+}
+
+$("calc").addEventListener("input", calc);
+$("calc").addEventListener("change", e=>{ if(e.target.type==="number"){ e.target.value = num(e.target.id); } calc(); });
+$("yr").textContent = new Date().getFullYear();
+calc();
+</script>
+</body>
+</html>
