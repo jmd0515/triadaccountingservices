@@ -1,6 +1,7 @@
 :root{
   --ink:#17212B; --pine:#23463D; --pine-deep:#183129; --sage:#E8EFEB; --sage-line:#C9D8D0;
   --paper:#FFFFFF; --mist:#F5F7F6; --muted:#55616B; --rule:#DCE2DF; --gold:#B8862B;
+  --leaf:#2F9E6B; --leaf-tint:#E3F4EB; --amber:#F2B33D; --amber-deep:#D9961F; --amber-tint:#FDF1D8;
   --serif:"Spectral", Georgia, serif; --sans:"Public Sans", system-ui, -apple-system, Segoe UI, sans-serif;
   --wrap:1120px;
 }
@@ -185,3 +186,37 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 /* Pricing page */
 .pricing-page{padding-top:64px}
 .page-title{font-size:clamp(36px,4.6vw,54px);letter-spacing:-.02em}
+
+/* ===== Contrast pass: dark hero, bright green accent, amber calls to action ===== */
+.btn-amber{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.btn-amber:hover{background:var(--amber-deep);border-color:var(--amber-deep)}
+.btn-light{background:transparent;border-color:rgba(255,255,255,.7);color:#fff}
+.btn-light:hover{background:rgba(255,255,255,.12)}
+
+.hero{background:radial-gradient(1200px 500px at 85% 10%,#2C6B57 0%,transparent 60%),var(--pine);color:#fff}
+.hero h1{color:#fff}
+.hero .lede{color:#D3E6DC}
+.hero-note{color:#A9CBBB}
+.month{color:var(--ink);box-shadow:0 24px 50px -20px rgba(0,0,0,.55);border-color:transparent}
+.month li b{color:var(--leaf)}
+
+.fit.us{background:var(--pine)}
+.fit.us ul li::marker{color:var(--amber)}
+
+.svc-grid{border-top:3px solid var(--leaf)}
+.svc h3{color:var(--pine)}
+
+.teaser-box{background:var(--amber-tint);border:1.5px solid #F0D49A}
+
+.steps{background:var(--pine-deep)}
+.step-list li::before{color:var(--amber)}
+.step-list li{border-top-color:rgba(255,255,255,.25)}
+
+.seg input:checked + label{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.statement{box-shadow:6px 6px 0 var(--leaf-tint)}
+.contact-box{box-shadow:8px 8px 0 var(--leaf-tint)}
+.contact-links a{color:var(--pine)}
+.brand svg circle:last-of-type{fill:var(--amber)}
+.pricing-page{background:linear-gradient(180deg,var(--leaf-tint),#fff 420px)}
+.statement{border-color:var(--pine)}
+.total output{color:var(--pine)}
