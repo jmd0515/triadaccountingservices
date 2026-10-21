@@ -179,7 +179,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media (max-width:560px){.ind-grid{grid-template-columns:1fr}.ind:nth-child(n){padding-left:0;border-left:0}}
 
 /* Pricing teaser */
-.price-teaser{padding-top:0}
 .teaser-box{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;background:var(--sage);border-radius:14px;padding:44px 48px}
 @media (max-width:560px){.teaser-box{padding:32px 24px}}
 
