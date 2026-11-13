@@ -124,7 +124,10 @@
         <p class="lede" style="margin-top:16px">Send a quick note or call. We'll reply within one business day and set up a 30-minute intro call.</p>
       </div>
       <div class="contact-links">
-        <a href="mailto:jeff@triadaccountingservices.com">jeff@triadaccountingservices.com<span>Email</span></a>
+        <div class="email-row">
+          <a href="mailto:jeff@triadaccountingservices.com">jeff@triadaccountingservices.com<span>Email</span></a>
+          <button type="button" class="copy-email" aria-live="polite" data-email="jeff@triadaccountingservices.com">Copy email</button>
+        </div>
         <a href="tel:+13096788238">(309) 678-8238<span>Call or text</span></a>
       </div>
     </div>
@@ -141,5 +144,6 @@
 </footer>
 
 <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script src="copy-email.js"></script>
 </body>
 </html>
