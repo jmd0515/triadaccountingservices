@@ -216,7 +216,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .statement{box-shadow:6px 6px 0 var(--leaf-tint)}
 .contact-box{box-shadow:8px 8px 0 var(--leaf-tint)}
 .contact-links a{color:var(--pine)}
-.brand svg circle:last-of-type{fill:var(--amber)}
 .pricing-page{background:linear-gradient(180deg,var(--leaf-tint),#fff 420px)}
 .statement{border-color:var(--pine)}
 .total output{color:var(--pine)}
+
+/* ===== Logo ===== */
+.brand-mark{flex:none;display:block}
+.brand-name{font:700 22px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.brand-name small{margin-top:5px;font:600 10.5px/1 var(--sans);letter-spacing:.2em;color:var(--muted)}
+.foot-brand{display:inline-flex;align-items:center;gap:10px}
+@media (max-width:560px){.brand-name{font-size:19px}.brand-name small{display:block;font-size:8.5px;letter-spacing:.14em;white-space:nowrap}}
